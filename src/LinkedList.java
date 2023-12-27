@@ -2,7 +2,7 @@ public class LinkedList {
 
     private Node head;
     private Node tail;
-    private int length;
+    private int length = 0;
 
     class Node {
         int value; // Value of the element of LinkedList
@@ -17,7 +17,6 @@ public class LinkedList {
         Node newNode = new Node(value); // 4
         head = newNode;
         tail = newNode;
-        length = 1;
     }
 
     public LinkedList() {
@@ -34,10 +33,34 @@ public class LinkedList {
         }else { //
            tail.next = newNode; // point to the newNode which is 5 , sets the next field of the current tail node to the new node.
            tail = newNode; // now the tail is 5 , Updates the tail to point to the new node.
+            length++; // Increments the length of the list.
         }
-        length++; // Increments the length of the list.
+
     }
 
+    public void prepend(int value){
+        Node newNode = new Node(value); // 5
+        if(length == 0 ){ // If the LinkedList is empty set Head & tail to 5
+            head = newNode;
+            tail = newNode;
+        }else {
+            newNode.next = head; // set the new node point to the next node
+            head = newNode; // and set the head to point to the newNode which is 5 in this case
+        }
+        length++;
+    }
+    public Node removeFirst() {
+        if (length == 0) return null;
+        Node temp = head; // creates a temporary reference to the first node in the list.
+        head = head.next; // moves the head pointer to the second node in the list, effectively removing the first node from the list.
+        temp.next = null; // sets the next field of the removed node to null, breaking the link between the removed node and the rest of the list.
+        // This is indeed a way to "remove" the node from the list, as no other nodes will have a reference to it.
+        length--;
+        if (length == 0) {
+            tail = null; // handles the case where the list becomes empty after removing the first node.
+        }
+        return temp; // returns the removed node, allowing the caller to access its value.
+    }
     public Node removeLast(){
 
         if(length == 0 ) return null;

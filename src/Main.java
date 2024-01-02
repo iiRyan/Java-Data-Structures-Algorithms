@@ -13,7 +13,9 @@ public class Main {
         myLinkedList.append(25);
         myLinkedList.append(7);
         myLinkedList.append(77);
-        System.out.println(myLinkedList.removeFirst().value);
+
+
+        myLinkedList.revers();
 
 
         System.out.print("\nLinked List: ");

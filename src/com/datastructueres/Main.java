@@ -6,13 +6,11 @@ public class Main {
 
         LinkedListCopy myLinkedList = new LinkedListCopy(4);
 
-        for (int i = 1; i <= 5; i++) {
-            myLinkedList.append(i);
-        }
-        myLinkedList.printAll();
-
-        System.out.println(myLinkedList.get(2));
-        myLinkedList.printAll();
+        myLinkedList.append(2);
+        myLinkedList.append(3);
+        myLinkedList.append(4);
+        myLinkedList.append(5);
+        System.out.println("The Middle Node equals ====> " + myLinkedList.findMiddleNode().value);
 
         // myLinkedList.append(10);
         // myLinkedList.append(25);

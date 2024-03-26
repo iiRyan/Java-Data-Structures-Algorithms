@@ -24,6 +24,14 @@ public class LinkedList {
     public LinkedList() {
     }
 
+    public Node getHead() {
+        return head;
+    }
+
+    public Node getTail() {
+        return tail;
+    }
+
     public Node get(int index) {
         if (index < 0 || index > length)
             return null;
@@ -193,25 +201,48 @@ public class LinkedList {
         }
     }
 
-    public void getHead() {
-        if (head == null) {
-            System.out.println("Head: null");
-        } else {
-            System.out.println("Head: " + head.value);
-        }
-
-    }
-
-    public void getTail() {
-        if (head == null) {
-            System.out.println("Tail: null");
-        } else {
-            System.out.println("Tail: " + tail.value);
-        }
-    }
-
     public void getLength() {
         System.out.println("Length: " + length);
+    }
+
+    public Node findMiddleNode() {
+        // Initialize slow pointer to the head of the linked list
+        Node slow = head;
+        // Initialize fast pointer to the head of the linked list
+        Node fast = head;
+        // Traverse the linked list with two pointers: slow and fast
+        // slow moves one node at a time, while fast moves two nodes at a time
+        while (fast != null && fast.next != null) {
+            // Move slow pointer to the next node
+            slow = slow.next;
+            // Move fast pointer to the next two nodes
+            fast = fast.next.next;
+        }
+        // Return the Node object representing the middle node of the linked list
+        return slow;
+    }
+
+    public boolean hasLoop() {
+        // Initialize slow pointer to the head of the linked list
+        Node slow = head;
+        // Initialize fast pointer to the head of the linked list
+        Node fast = head;
+        // Traverse the linked list with two pointers: slow and fast
+        // slow moves one node at a time, while fast moves two nodes at a time
+        while (fast != null && fast.next != null) {
+            // Move slow pointer to the next node
+            slow = slow.next;
+            // Move fast pointer to the next two nodes
+            fast = fast.next.next;
+            // If slow pointer meets fast pointer, then there is a loop in the linked list
+            if (slow == fast) {
+                return true;
+            }
+        }
+
+        // If the loop has not been detected after the traversal, then there is no loop
+        // in the linked list
+        return false;
     }
 
     /*

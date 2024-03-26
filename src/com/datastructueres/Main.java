@@ -1,16 +1,21 @@
-import com.datastructueres.HighArray;
-import com.datastructueres.LinkedListCopy;
+package com.datastructueres;
 
 public class Main {
     public static void main(String[] args) {
 
-        LinkedListCopy myLinkedList = new LinkedListCopy(4);
+        // LinkedList myLinkedList = new LinkedList(1);
+        // myLinkedList.append(2);
+        // myLinkedList.append(3);
+        // myLinkedList.append(4);
+        // myLinkedList.append(5);
+        // myLinkedList.append(50);
 
-        myLinkedList.append(2);
-        myLinkedList.append(3);
-        myLinkedList.append(4);
-        myLinkedList.append(5);
-        System.out.println("The Middle Node equals ====> " + myLinkedList.findMiddleNode().value);
+        // create a loop by connecting the tail to the second node
+        // myLinkedList.getTail().next = myLinkedList.getHead().next;
+
+        // System.out.println(myLinkedList.findMiddleNode().value);
+        // System.out.println("Has Loop:");
+        // System.out.println(myLinkedList.hasLoop());
 
         // myLinkedList.append(10);
         // myLinkedList.append(25);
@@ -49,4 +54,5 @@ public class Main {
         // System.out.println(arr.binarySearch(1515));
 
     }
+
 }

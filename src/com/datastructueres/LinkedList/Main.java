@@ -3,19 +3,18 @@ package com.datastructueres;
 public class Main {
     public static void main(String[] args) {
 
-        // LinkedList myLinkedList = new LinkedList(1);
-        // myLinkedList.append(2);
-        // myLinkedList.append(3);
-        // myLinkedList.append(4);
-        // myLinkedList.append(5);
-        // myLinkedList.append(50);
+        LinkedList myLinkedList = new LinkedList(1);
+        myLinkedList.append(2);
+        myLinkedList.append(3);
+        myLinkedList.append(4);
+        myLinkedList.append(5);
+        myLinkedList.append(50);
 
         // create a loop by connecting the tail to the second node
-        // myLinkedList.getTail().next = myLinkedList.getHead().next;
+        myLinkedList.getTail().next = myLinkedList.getHead().next;
 
-        // System.out.println(myLinkedList.findMiddleNode().value);
-        // System.out.println("Has Loop:");
-        // System.out.println(myLinkedList.hasLoop());
+        System.out.println("Has Loop:");
+        System.out.println(myLinkedList.hasLoop());
 
         // myLinkedList.append(10);
         // myLinkedList.append(25);

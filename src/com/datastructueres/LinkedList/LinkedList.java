@@ -6,15 +6,6 @@ public class LinkedList {
     private Node tail;
     private int length = 0;
 
-    class Node {
-        int value; // Value of the element of LinkedList
-        Node next; // This points to the next element of the LinkedList
-
-        Node(int value) {
-            this.value = value;
-        }
-    }
-
     public LinkedList(int value) {
         Node newNode = new Node(value); // 4
         head = newNode;

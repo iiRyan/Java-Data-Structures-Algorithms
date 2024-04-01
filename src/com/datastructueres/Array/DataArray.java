@@ -1,4 +1,6 @@
-package com.datastructueres;
+package com.datastructueres.Array;
+
+import com.datastructueres.Person;
 
 public class DataArray {
     private Person person[];

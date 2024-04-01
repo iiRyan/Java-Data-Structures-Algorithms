@@ -1,4 +1,6 @@
-package com.datastructueres;
+package com.datastructueres.LinkedList;
+
+import com.datastructueres.Node;
 
 public class LinkedList {
 
@@ -152,7 +154,6 @@ public class LinkedList {
         Node pre = head;
 
         while (temp.next != null) {
-
             pre = temp;
             temp = temp.next;
         }
@@ -230,27 +231,40 @@ public class LinkedList {
                 return true;
             }
         }
-
         // If the loop has not been detected after the traversal, then there is no loop
         // in the linked list
         return false;
     }
 
-    /*
-     * public Node removeDuplicates(Node head) {
-     * 
-     * Node current_node = head;
-     * 
-     * while (current_node != null && current_node.next != null){
-     * if (current_node.next.value == current_node.value){
-     * current_node.next = current_node.next.next;
-     * }else {
-     * current_node = current_node.next;
-     * }
-     * }
-     * return head;
-     * 
-     * }
-     */
+    public Node removeElements(int val){
+        Node current_node = head;
+        Node prev = head;
+        while (current_node != null && current_node.next !=null){
+            if(current_node.value == val){
+                prev.next = current_node.next;
+                current_node = null;
+
+            }else {
+                prev = current_node;
+                current_node = current_node.next;
+            }
+        }
+        return  head;
+    }
+
+
+//     public Node removeDuplicates() {
+//
+//      Node current_node = head;
+//       while (current_node != null && current_node.next != null){
+//      if (current_node.next.value == current_node.value){
+//      current_node.next = current_node.next.next;
+//      }else {
+//      current_node = current_node.next;
+//      }
+//      }
+//      return head;
+//      }
+
 
 }

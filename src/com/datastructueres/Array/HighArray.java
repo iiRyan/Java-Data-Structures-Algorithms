@@ -1,4 +1,4 @@
-package com.datastructueres;
+package com.datastructueres.Array;
 
 public class HighArray {
 

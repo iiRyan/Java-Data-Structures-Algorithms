@@ -1,62 +1,49 @@
 package com.datastructueres.LinkedList;
 
+import com.datastructueres.ListNode;
+import com.datastructueres.Node;
+
 public class Main {
     public static void main(String[] args) {
 
-        LinkedList myLinkedList = new LinkedList(1);
-        myLinkedList.append(7);
-        myLinkedList.append(7);
-        myLinkedList.append(7);
-        myLinkedList.append(7);
-        myLinkedList.append(7);
+        LinkedList myLinkedList = new LinkedList();
+        myLinkedList.append(1);
+        myLinkedList.append(2);
+        myLinkedList.append(3);
 
+        LinkedList secondList = new LinkedList();
+        secondList.append(4);
+        secondList.append(5);
+        secondList.append(6);
 
+        //Node newList = mergeTwoLists(myLinkedList,secondList);
 
+//        Node temp = newList;
+//        while (temp.next != null){
+//            System.out.println(temp.value);
+//            temp = temp.next;
+//        }
         // create a loop by connecting the tail to the second node
-//        myLinkedList.getTail().next = myLinkedList.getHead().next;
+        // myLinkedList.getTail().next = myLinkedList.getHead().next;
 
-        myLinkedList.printList();
+    }
 
-        System.out.println("removeElements =====> " + myLinkedList.removeElements(7));
 
-        System.out.println("After");
-        myLinkedList.printList();
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
-        // myLinkedList.append(10);
-        // myLinkedList.append(25);
-        // myLinkedList.append(7);
-        // myLinkedList.append(77);
+        ListNode tempNode = new ListNode(0);
+        ListNode cureentNode = tempNode;
+        while (list1.next != null && list2.next != null){
+            if(list1.val < list2.val){
+                cureentNode.next = list1;
+                list1 = list1.next;
+            }else {
+                cureentNode.next = list2;
+                list2 = list2.next;
+            }
+        }
 
-        // myLinkedList.revers();
-
-        // System.out.print("\nLinked List: ");
-        // myLinkedList.printList();
-
-        // System.out.print("\nLength: ");
-        // myLinkedList.getLength();
-
-        // printItem(10);
-
-        // int maxSize = 10; // array size
-        // HighArray arr; // reference to array
-        // arr = new HighArray(maxSize); // create the array
-
-        // arr.insert(20); // insert 10 items
-        // arr.insert(22);
-        // arr.insert(25);
-        // arr.insert(30);
-        // arr.insert(44);
-
-        // arr.display(); // display items
-        // System.out.println();
-
-        // arr.insert(1);
-        // arr.insert(12);
-        // arr.insert(10);
-        // arr.insert(15);
-
-        // arr.display(); // display items
-        // System.out.println(arr.binarySearch(1515));
+        return null;
 
     }
 

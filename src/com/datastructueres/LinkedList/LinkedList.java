@@ -8,11 +8,7 @@ public class LinkedList {
     private Node tail;
     private int length = 0;
 
-    public LinkedList(int value) {
-        Node newNode = new Node(value); // 4
-        head = newNode;
-        tail = newNode;
-    }
+
 
     public LinkedList() {
     }
@@ -186,10 +182,30 @@ public class LinkedList {
 
     public void printList() {
         Node temp = head;
-
+        System.out.print("{");
         while (temp != null) {
-            System.out.print(temp.value + " ");
+            System.out.print(temp.value);
             temp = temp.next;
+            System.out.print(",");
+        }
+        System.out.println("}");
+
+    }
+
+    public void printAll() {
+        if (length == 0) {
+            System.out.println("Head: null");
+            System.out.println("Tail: null");
+        } else {
+            System.out.println("Head: " + head.value);
+            System.out.println("Tail: " + tail.value);
+        }
+        System.out.println("Length:" + length);
+        System.out.println("\nLinked List:");
+        if (length == 0) {
+            System.out.println("empty");
+        } else {
+            printList();
         }
     }
 

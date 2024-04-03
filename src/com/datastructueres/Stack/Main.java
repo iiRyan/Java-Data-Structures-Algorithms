@@ -9,6 +9,8 @@ public class Main {
         myStack.push(10);
         myStack.push(11);
         System.out.println(myStack.pop().value);
+        System.out.println(myStack.pop().value);
+        System.out.println(myStack.pop().value);
          myStack.printAll();
     }
 }

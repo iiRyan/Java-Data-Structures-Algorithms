@@ -13,5 +13,12 @@ public class Main {
         myBTS.insert(60);
         System.out.println("My BTS: " + myBTS.root.right.left.value);
         System.out.println("Does Contains: " + myBTS.contains(25));
+
+
+
+
+
     }
+
+
 }

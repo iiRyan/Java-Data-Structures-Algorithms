@@ -1,24 +1,21 @@
 package com.datastructueres.hashtable;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
 
         HashTable myHashTable = new HashTable();
+        LinkedList<String> utill = new LinkedList<>();
 
-        myHashTable.set("Galaxy",2);
-        myHashTable.set("Apple",20);
-        myHashTable.set("Apple",1000);
-        myHashTable.set("Seven Up",3);
-        myHashTable.set("Rice",20);
+        utill.add("Rayan");
+        utill.add("Saad");
+        utill.add("Fahad");
+        utill.add("jojo");
 
-        int[] nums = {1, 2, 3, 2, 1, 4, 5, 4};
-        List<Integer> duplicates = findDuplicates(nums);
-        System.out.println(duplicates);
+        System.out.println(utill);
+
+
 
     }
 

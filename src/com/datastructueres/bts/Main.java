@@ -3,16 +3,25 @@ package com.datastructueres.bts;
 public class Main {
 
     public static void main(String[] args) {
-        BinarySearchTree myBTS = new BinarySearchTree();
-        myBTS.insert(15);
-        myBTS.insert(10);
-        myBTS.insert(30);
-        myBTS.insert(8);
-        myBTS.insert(12);
-        myBTS.insert(25);
-        myBTS.insert(60);
-        System.out.println("My BTS: " + myBTS.root.right.left.value);
-        System.out.println("Does Contains: " + myBTS.contains(25));
+        BinarySearchTree myBST = new BinarySearchTree();
+        myBST.insert(47);
+        myBST.insert(21);
+        myBST.insert(76);
+        myBST.insert(18);
+        myBST.insert(27);
+        myBST.insert(52);
+        myBST.insert(82);
+
+        System.out.println("\nBreadth First Search:");
+        System.out.println( myBST.BFS() );
+
+        /*
+            EXPECTED OUTPUT:
+            ----------------
+            Breadth First Search:
+            [47, 21, 76, 18, 27, 52, 82]
+
+        */
 
 
 
